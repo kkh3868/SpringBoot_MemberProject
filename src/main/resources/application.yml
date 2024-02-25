@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    # 각자 PC에 만들어놓은 DB이름을 써야 합니다
+    url: jdbc:mysql://localhost:3306/member?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    # MySQL에 생성한 사용자 계정 정보를 써야 합니다
+    username: memberuser
+    password: 9409
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # spring data jpa 설정
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: create
